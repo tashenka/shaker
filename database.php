@@ -10,6 +10,10 @@ $users = mysql_query("SELECT * FROM users", $mysql);
 <table class="table">
   <thead>
     <tr>
+      <th colspan="4"></th>
+      <th colspan="3">Разрешение допуска</th>
+    </tr>
+    <tr>
       <th>ФИО</th>
       <th>Должность</th>
       <th>Время</th>
