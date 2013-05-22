@@ -5,6 +5,8 @@ include 'config.php';
 $users = mysql_query("SELECT * FROM users", $mysql);
 ?>
 
+<a href="add-user.php">Добавить сотрудника/посетителя</a>
+
 <table class="table">
   <thead>
     <tr>
