@@ -1,5 +1,5 @@
 <head>
-  <link href="/css/bootstrap.css" rel="stylesheet">
+  <link href="css/bootstrap.css" rel="stylesheet">
 </head>
 <ul class="nav nav-tabs">
   <?php $file_name = basename($_SERVER['REQUEST_URI']); ?>
