@@ -5,7 +5,7 @@ include 'config.php';
 ?>
 <h2>Добавление сотрудника/посетителя</h1>
 
-<form action="create-user.php" method="post" class="form-horizontal">
+<form action="create-user.php" method="post">
   <input id="name" name="name" type="text" placeholder="Введите ФИО" />
   <br/>
   <input id="position" name="position" type="text" placeholder="Введите должность" />
