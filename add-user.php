@@ -1,40 +1,31 @@
 <html>
+<?php
+include 'header.html';
+include 'config.php';
+?>
+<h2>Добавление сотрудника/посетителя</h1>
 
-<form action="add-u.php" method="get">
+<form action="create-user.php" method="post" class="form-horizontal">
+  <input id="name" name="name" type="text" placeholder="Введите ФИО" />
+  <br/>
+  <input id="position" name="position" type="text" placeholder="Введите должность" />
+  <br/>
+  <input id="card_id" name="card_id" type="text" placeholder="Введите номер карты доступа" />
+  <br/>
+  <label class="checkbox">
+    <input id="zone_green" name="zone_green" type="checkbox" value="1"> Зеленая зона
+  </label>
+  <label class="checkbox">
+    <input id="zone_yellow" name="zone_yellow" type="checkbox" value="1"> Желтая зона
+  </label>
+  <label class="checkbox">
+    <input id="zone_red" name="zone_red" type="checkbox" value="1"> Красная зона
+  </label>
 
-<table class="table" border="1">
-  <thead>
-    <tr>
-      <th>ФИО</th>
-      <th>Должность</th>
-      <th>Время</th>
-      <th>№ карты</th>
-      <th>Зеленая</th>
-      <th>Желтая</th>
-      <th>Красная</th>
-    </tr>
-  <thead>
-  <tbody>
-
-   <tr>
-        <td><?php echo $row['name']; ?></td>
-	<td><?php echo $row['position']; ?></td>
-<!--	<td><?php echo $row['time']; ?></td> -->
-	<td><?php echo $row['card_id']; ?></td>
-	<td><input type="radio" name="access1" value="y1">Да
-	    <input type="radio" name="access1" value="n1">Нет
-	</td>
-	<td><input type="radio" name="access2" value="y2">Да
-	    <input type="radio" name="access2" value="n2">Нет
-	</td>
-	<td><input type="radio" name="access3" value="y3">Да
-	    <input type="radio" name="access3" value="n3">Нет
-	</td>
-   </tr>
-
-
-</tbody>
-<input type="submit" name="button" value="Добавить" />  
+  <label class="checkbox">
+    <input id="temprary" name="temprary" type="checkbox" value="1"> Временный доступ
+  </label>
+  <input name="commit" type="submit" value="Создать пользователя" />
 </form>
 
 </html>

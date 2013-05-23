@@ -1,5 +1,6 @@
 <html>
 <?php
+include 'header.html';
 include 'config.php';
 
 $users = mysql_query("SELECT * FROM users", $mysql);
@@ -25,7 +26,7 @@ $users = mysql_query("SELECT * FROM users", $mysql);
   <thead>
   <tbody>
 <?php while ($row = mysql_fetch_assoc($users)): ?>
-    <tr>
+<tr class="<?php echo $row['temprary']? 'warning' : '' ?>">
 <td><?php echo $row['name']; ?></td>
 <td><?php echo $row['position']; ?></td>
 <td><?php echo $row['time']; ?></td>
