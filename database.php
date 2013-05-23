@@ -1,6 +1,6 @@
 <html>
 <?php
-include 'header.html';
+include 'header.php';
 include 'config.php';
 
 $users = mysql_query("SELECT * FROM users", $mysql);

@@ -1,6 +1,6 @@
 <html>
 <?php
-include 'header.html';
+include 'header.php';
 include 'config.php';
 ?>
 <h2>Добавление сотрудника/посетителя</h1>
