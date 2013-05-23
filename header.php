@@ -9,6 +9,9 @@
   <li class="<?php echo ($file_name == 'database.php')? 'active' : '' ?>">
     <a href="database.php">БД Сотрудников</a>
   </li>
+  <li class="<?php echo ($file_name == 'add-user.php')? 'active' : '' ?>">
+    <a href="add-user.php">Добавить сотрудника</a>
+  </li>
   <li class="<?php echo ($file_name == 'access.php')? 'active' : '' ?>">
     <a href="access.php">Проход в зоны</a>
   </li>
