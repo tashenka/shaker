@@ -3,7 +3,7 @@
 </head>
 <ul class="nav nav-tabs">
   <?php $file_name = basename($_SERVER['REQUEST_URI']); ?>
-  <li class="<?php echo ($file_name == 'index.php')? 'active' : '' ?>">
+  <li class="<?php echo ($file_name == 'index.php' || $file_name == '')? 'active' : '' ?>">
     <a href="index.php">Схема порта</a>
   </li>
   <li class="<?php echo ($file_name == 'database.php')? 'active' : '' ?>">
