@@ -33,7 +33,7 @@ CREATE TABLE `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `temprary` tinyint(4) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -42,7 +42,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES ('Dmitry Gruzd','developer',NULL,0,0,0,0,1,0),('Наташа Маслова','студент',NULL,0,0,0,0,2,0),('Грузд Дмитрий','developer',NULL,123,0,1,0,3,0),('Грузд Дмитрий','developer',NULL,123,0,1,0,4,0),('Грузд Дмитрий','developer',NULL,123,0,1,0,5,0),('Грузд Дмитрий','developer',NULL,123,0,1,0,6,1),('Грузд Дмитрий','developer',NULL,123,0,1,0,7,0),('','',NULL,0,0,0,0,8,0),('4444','444',NULL,4444,1,0,0,9,1),('55555','',NULL,0,0,0,0,10,0),('','',NULL,0,1,1,0,11,0),('5252525252525','',NULL,0,0,0,0,12,1),('','',NULL,0,0,0,0,13,1);
+INSERT INTO `users` VALUES ('Наташа Маслова','студент',NULL,3256624677,1,1,0,15,0),('Иванов Иван Иванович','преподаватель',NULL,36634773457,1,1,0,16,0),('Петров Иван Николаевич','преподаватель',NULL,8734634463,1,1,1,17,0),('Семенов Александр Иванович','',NULL,463634777,1,0,0,19,1);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -55,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2013-05-29 12:59:22
+-- Dump completed on 2013-05-29 15:13:28
