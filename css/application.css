@@ -13,3 +13,11 @@
 border: 2px inset White; background: Black; padding: 5px; font-size: 14px; font-family: "Courier"; color: LightGreen; margin: 2px; display: block;
 }
 
+#access_denied{
+  color: red;
+  display: none;
+}
+#access_granted{
+  color: green;
+  display: none;
+}

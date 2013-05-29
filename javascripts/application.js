@@ -21,5 +21,7 @@ return i;
 }
 
 $(function() {
+  //Clock
   $("#clock").clock({"format":"24","calendar":"false"});
+
 });
