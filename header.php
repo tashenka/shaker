@@ -1,4 +1,5 @@
 <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <link href="css/bootstrap.css" rel="stylesheet">
   <link href="css/application.css" rel="stylesheet">
   <script type="text/javascript" src="javascripts/bootstrap.js"></script>
