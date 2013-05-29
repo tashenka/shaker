@@ -25,6 +25,8 @@ include 'config.php';
   <label class="checkbox">
     <input id="temprary" name="temprary" type="checkbox" value="1"> Временный доступ
   </label>
+  <input id="password" name="password" type="password" placeholder="Введите Пароль" />
+  <br/>
   <input name="commit" type="submit" value="Создать пользователя" />
 </form>
 
