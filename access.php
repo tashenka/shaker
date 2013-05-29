@@ -9,7 +9,13 @@ $users = mysql_query("SELECT * FROM users WHERE id != $id", $mysql);
 $user = mysql_fetch_assoc($query);
 $array = array();
 
-$access_granted = ($user["zone_$zone"] == '1')? 'true' : 'false';
+$a_granted = $user["zone_$zone"];
+$access_granted = ($a_granted == '1')? 'true' : 'false';
+
+$datetime = date("Y-m-d H:i:s");
+
+$q = "insert into journal (user_id, zone, allowed, time) values ($id, '$zone', $a_granted, '$datetime');";
+$result = mysql_query($q, $mysql) or die(mysql_error());
 
 
 function braces($n)
@@ -59,7 +65,7 @@ function braces($n)
 <div class="container">
 <div class="row">
   <div class="span6">
-    <h1><?php echo $user['name']; ?></h1>
+    <h1>ФИО:<?php echo $user['name']; ?></h1>
     <h2>Card: <?php echo $user['card_id']; ?></h2>
     <img id="finger_scanner" src="images/finger_scanner.gif"/>
   </div>

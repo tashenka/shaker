@@ -16,6 +16,33 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `journal`
+--
+
+DROP TABLE IF EXISTS `journal`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `journal` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) NOT NULL,
+  `zone` varchar(255) COLLATE utf8_bin NOT NULL,
+  `allowed` tinyint(4) NOT NULL,
+  `time` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `journal`
+--
+
+LOCK TABLES `journal` WRITE;
+/*!40000 ALTER TABLE `journal` DISABLE KEYS */;
+INSERT INTO `journal` VALUES (6,15,'green',1,'2013-05-29 13:44:37'),(7,16,'yellow',1,'2013-05-29 13:44:48'),(8,17,'red',1,'2013-05-29 13:45:05'),(9,19,'yellow',0,'2013-05-29 13:45:11');
+/*!40000 ALTER TABLE `journal` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `users`
 --
 
@@ -25,7 +52,6 @@ DROP TABLE IF EXISTS `users`;
 CREATE TABLE `users` (
   `name` varchar(255) COLLATE utf8_bin NOT NULL,
   `position` varchar(255) COLLATE utf8_bin NOT NULL,
-  `time` datetime DEFAULT NULL,
   `card_id` bigint(20) NOT NULL,
   `zone_green` tinyint(4) NOT NULL DEFAULT '0',
   `zone_yellow` tinyint(4) NOT NULL DEFAULT '0',
@@ -42,7 +68,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES ('Наташа Маслова','студент',NULL,3256624677,1,1,0,15,0),('Иванов Иван Иванович','преподаватель',NULL,36634773457,1,1,0,16,0),('Петров Иван Николаевич','преподаватель',NULL,8734634463,1,1,1,17,0),('Семенов Александр Иванович','',NULL,463634777,1,0,0,19,1);
+INSERT INTO `users` VALUES ('Наташа Маслова','студент',3256624677,1,1,0,15,0),('Иванов Иван Иванович','преподаватель',36634773457,1,1,0,16,0),('Петров Иван Николаевич','преподаватель',8734634463,1,1,1,17,0),('Семенов Александр Иванович','',463634777,1,0,0,19,1);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -55,4 +81,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2013-05-29 15:13:28
+-- Dump completed on 2013-05-29 15:45:25

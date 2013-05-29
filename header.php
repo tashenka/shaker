@@ -19,8 +19,8 @@
   <li class="<?php echo ($file_name == 'add-user.php')? 'active' : '' ?>">
     <a href="add-user.php">Добавить сотрудника</a>
   </li>
-  <li class="<?php echo ($file_name == 'access.php')? 'active' : '' ?>">
-    <a href="access.php">Проход в зоны</a>
+  <li class="<?php echo ($file_name == 'journal.php')? 'active' : '' ?>">
+    <a href="journal.php">Журнал</a>
   </li>
   <li>
     <div id="clock"></div>
