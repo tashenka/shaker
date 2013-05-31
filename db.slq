@@ -29,7 +29,7 @@ CREATE TABLE `journal` (
   `allowed` tinyint(4) NOT NULL,
   `time` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -38,7 +38,7 @@ CREATE TABLE `journal` (
 
 LOCK TABLES `journal` WRITE;
 /*!40000 ALTER TABLE `journal` DISABLE KEYS */;
-INSERT INTO `journal` VALUES (6,15,'green',1,'2013-05-29 13:44:37'),(7,16,'yellow',1,'2013-05-29 13:44:48'),(8,17,'red',1,'2013-05-29 13:45:05'),(9,19,'yellow',0,'2013-05-29 13:45:11'),(10,19,'yellow',0,'2013-05-29 14:24:46'),(11,19,'red',0,'2013-05-29 14:24:53'),(12,19,'green',1,'2013-05-29 14:24:59'),(13,15,'green',1,'2013-05-31 11:33:31'),(14,20,'red',1,'2013-05-31 12:26:46'),(15,21,'yellow',0,'2013-05-31 12:29:23');
+INSERT INTO `journal` VALUES (6,15,'green',1,'2013-05-29 13:44:37'),(7,16,'yellow',1,'2013-05-29 13:44:48'),(8,17,'red',1,'2013-05-29 13:45:05'),(9,19,'yellow',0,'2013-05-29 13:45:11'),(10,19,'yellow',0,'2013-05-29 14:24:46'),(11,19,'red',0,'2013-05-29 14:24:53'),(12,19,'green',1,'2013-05-29 14:24:59'),(13,15,'green',1,'2013-05-31 11:33:31'),(14,20,'red',1,'2013-05-31 12:26:46'),(15,21,'yellow',0,'2013-05-31 12:29:23'),(16,20,'green',1,'2013-05-31 12:39:36'),(17,21,'green',1,'2013-05-31 12:39:37'),(18,22,'green',1,'2013-05-31 12:39:38'),(19,23,'green',1,'2013-05-31 12:39:38');
 /*!40000 ALTER TABLE `journal` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -81,4 +81,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2013-05-31 14:30:17
+-- Dump completed on 2013-05-31 14:45:52
