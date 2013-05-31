@@ -21,6 +21,7 @@ $users = mysql_query("SELECT * FROM users", $mysql);
       <th>Желтая</th>
       <th>Красная</th>
       <th>Сканер отпечатков</th>
+      <th></th>
     </tr>
   <thead>
   <tbody>
@@ -37,6 +38,9 @@ $users = mysql_query("SELECT * FROM users", $mysql);
 <a class="btn btn-success" href="access.php?id=<?php echo $row['id'] ?>&zone=green">Сканер</a>
 <a class="btn btn-warning" href="access.php?id=<?php echo $row['id'] ?>&zone=yellow">Сканер</a>
 <a class="btn btn-danger" href="access.php?id=<?php echo $row['id'] ?>&zone=red">Сканер</a>
+</td>
+<td>
+<a class="btn" href="destroy-user.php?id=<?php echo $row['id'] ?>">Удалить</a>
 </td>
 </tr>
 <?php endwhile ?>
