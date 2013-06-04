@@ -82,6 +82,7 @@ function braces($n)
     </div>
   </div>
 </div>
+<?php if(! $_GET['card'] == 'true' ): ?>
 <div class="row">
   <div class="span3">
     <img id="finger_scanner2" src="images/white_finger.jpg"/>
@@ -90,6 +91,7 @@ function braces($n)
     <img id="finger_scanner" src="images/finger_scanner.gif"/>
   </div>
 </div>
+<?php endif; ?>
 
 </div>
 

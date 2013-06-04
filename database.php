@@ -21,7 +21,7 @@ $users = mysql_query("SELECT * FROM users", $mysql);
       <th>Зеленая</th>
       <th>Желтая</th>
       <th>Красная</th>
-      <th>Сканер отпечатков</th>
+      <th></th>
       <th></th>
     </tr>
   <thead>
@@ -36,7 +36,7 @@ $users = mysql_query("SELECT * FROM users", $mysql);
 <td><?php echo ($row['zone_yellow'] ? 'ДА' : 'НЕТ'); ?></td>
 <td><?php echo ($row['zone_red'] ? 'ДА' : 'НЕТ'); ?></td>
 <td>
-<a class="btn btn-success" href="access.php?id=<?php echo $row['id'] ?>&zone=green">Сканер</a>
+<a class="btn btn-success" href="access.php?id=<?php echo $row['id'] ?>&zone=green&card=true">Считать карту</a>
 <a class="btn btn-warning" href="access.php?id=<?php echo $row['id'] ?>&zone=yellow">Сканер</a>
 <a class="btn btn-danger" href="access.php?id=<?php echo $row['id'] ?>&zone=red">Сканер</a>
 </td>
