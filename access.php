@@ -14,7 +14,7 @@ $access_granted = ($a_granted == '1')? 'true' : 'false';
 
 $datetime = date("Y-m-d H:i:s");
 
-$q = "insert into journal (user_id, zone, allowed, time) values ($id, '$zone', $a_granted, '$datetime');";
+$q = "insert into journal (user_id, zone, allowed, time) values ($id, '$zone', $a_granted, NOW());";
 $result = mysql_query($q, $mysql) or die(mysql_error());
 
 
@@ -45,7 +45,8 @@ function braces($n)
         }                        //  ..  setTimeout()
         else{
           $("#action").fadeOut();
-          $("#finger_scanner").fadeOut();
+          //$("#finger_scanner").fadeOut();
+          $("#finger_scanner").attr("src","images/white_finger.jpg");
           if(access_granted){
           $("#access_granted").fadeIn();
           }else{
@@ -67,7 +68,6 @@ function braces($n)
   <div class="span6">
     <h1>ФИО:<?php echo $user['name']; ?></h1>
     <h2>Card: <?php echo $user['card_id']; ?></h2>
-    <img id="finger_scanner" src="images/finger_scanner.gif"/>
   </div>
   <div class="span6">
     <div id="action">
@@ -82,6 +82,15 @@ function braces($n)
     </div>
   </div>
 </div>
+<div class="row">
+  <div class="span3">
+    <img id="finger_scanner2" src="images/white_finger.jpg"/>
+  </div>
+  <div class="span6">
+    <img id="finger_scanner" src="images/finger_scanner.gif"/>
+  </div>
+</div>
+
 </div>
 
 

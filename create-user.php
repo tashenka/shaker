@@ -18,7 +18,10 @@ $query = "INSERT INTO users (name, position, card_id, zone_green, zone_yellow, z
 
 if($password == 'password'){
 $result = mysql_query($query, $mysql) or die(mysql_error());;
+header('Location: database.php');
+}
+else{
+header('Location: database.php?notice_error=Неправильный+пароль');
 }
 
-header('Location: database.php');
 ?>

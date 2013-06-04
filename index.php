@@ -5,10 +5,41 @@ include 'header.php';
 
 $green_zone = mysql_fetch_assoc(mysql_query("SELECT COUNT(*) AS count FROM journal WHERE zone = 'green' and allowed = 1;", $mysql))['count'];
 $yellow_zone = mysql_fetch_assoc(mysql_query("SELECT COUNT(*) AS count FROM journal WHERE zone = 'yellow' and allowed = 1;", $mysql))['count'];
+$yellow_users = mysql_query("SELECT * FROM journal INNER JOIN users WHERE journal.user_id = users.id AND journal.zone = 'yellow' and journal.allowed = 1 ORDER BY time DESC", $mysql);
 $red_zone = mysql_fetch_assoc(mysql_query("SELECT COUNT(*) AS count FROM journal WHERE zone = 'red' and allowed = 1;", $mysql))['count'];
 $red_users = mysql_query("SELECT * FROM journal INNER JOIN users WHERE journal.user_id = users.id AND journal.zone = 'red' and journal.allowed = 1 ORDER BY time DESC", $mysql);
+$access_users = mysql_query("SELECT * FROM journal INNER JOIN users WHERE journal.user_id = users.id and journal.allowed = 0 and time > NOW()-600 ORDER BY time DESC;", $mysql);
+$access_count =  mysql_fetch_assoc(mysql_query("SELECT COUNT(*) AS count FROM journal INNER JOIN users WHERE journal.user_id = users.id and journal.allowed = 0 and time > NOW()-600;", $mysql))['count'];
 
 ?>
+<?php if ($access_count != '0'): ?>
+<script type="text/javascript">
+$(function(){
+  $("#accessModal").modal({'show':true});
+});
+</script>
+<?php endif; ?>
+
+    <a href="#" class="btn btn-warning">Разблокировать все</a>
+    <a href="#" class="btn btn-danger">Заблокировать все</a>
+
+<div id="accessModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Уведомления</h3>
+  </div>
+  <div class="modal-body">
+  <p>Человек пытался пройти в зону, к которой у него нет доступа:</p>
+  <?php while ($row_a = mysql_fetch_assoc($access_users)): ?>
+    <ol>
+    <li><?php echo $row_a['time']; ?> <?php echo $row_a['name']; ?> <?php echo $row_a['zone']; ?></li>
+    </ol>
+  <?php endwhile ?>
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+  </div>
+</div>
 <div id="greenModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
@@ -28,6 +59,12 @@ $red_users = mysql_query("SELECT * FROM journal INNER JOIN users WHERE journal.u
   </div>
   <div class="modal-body">
   <p>Человек в желтой зоне: <?php echo $yellow_zone ?></p>
+  <?php while ($row_y = mysql_fetch_assoc($yellow_users)): ?>
+    <h4>Список:</h4>
+    <ol>
+<li><?php echo $row_y['time']; ?> <?php echo $row_y['name']; ?></li>
+    </ol>
+  <?php endwhile ?>
   </div>
   <div class="modal-footer">
     <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
@@ -43,7 +80,7 @@ $red_users = mysql_query("SELECT * FROM journal INNER JOIN users WHERE journal.u
 <?php while ($row = mysql_fetch_assoc($red_users)): ?>
   <h4>Список:</h4>
   <ol>
-<li><?php echo $row['name']; ?></li>
+<li><?php echo $row['time']; ?> <?php echo $row['name']; ?></li>
   </ol>
 <?php endwhile ?>
   </div>
