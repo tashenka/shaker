@@ -29,3 +29,11 @@
  </div>
 </div>
 </ul>
+<?php
+if($_GET['notice_error']){
+echo '<div class="alert alert-error">';
+echo '  <button type="button" class="close" data-dismiss="alert">&times;</button>';
+echo $_GET['notice_error'];
+echo "</div>";
+}
+?>

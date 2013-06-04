@@ -15,13 +15,18 @@ $password = $_POST["password"];
 $query = "INSERT INTO users (name, position, card_id, zone_green, zone_yellow, zone_red, temprary) VALUES ('$name','$position', '$card_id', $zone_green, $zone_yellow, $zone_red, $temprary);";
 
 
+$q = mysql_fetch_assoc(mysql_query("SELECT COUNT(*) AS COUNT FROM users WHERE card_id = '$card_id';", $mysql));
+$q_count = $q['count'];
 
-if($password == 'password'){
-$result = mysql_query($query, $mysql) or die(mysql_error());;
-header('Location: database.php');
+
+if($password != 'password'){
+header('Location: add-user.php?notice_error=Неправильный+пароль');
+} elseif($q_count != '0'){
+header('Location: add-user.php?notice_error=Сотрудник+с+такой+картой+доступа+уже+добавлен');
 }
 else{
-header('Location: database.php?notice_error=Неправильный+пароль');
+$result = mysql_query($query, $mysql) or die(mysql_error());;
+header('Location: database.php');
 }
 
 ?>

@@ -2,6 +2,7 @@
 include 'config.php';
 
 $journal = mysql_query("SELECT * FROM journal INNER JOIN users WHERE journal.user_id = users.id ORDER BY time DESC", $mysql);
+//mysql_query("DELETE * FROM journal")", $mysql);
 ?>
 Время, Вход/Выход, ФИО, Должность, № Карты, Зона, Отпечаток пальца, Отпечаток языка
 <?php while ($row = mysql_fetch_assoc($journal)): ?>

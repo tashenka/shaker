@@ -24,8 +24,10 @@ $(function(){
 </script>
 <?php endif; ?>
 
-    <a href="#" class="btn btn-warning">Разблокировать все</a>
-    <a href="#" class="btn btn-danger">Заблокировать все</a>
+    <audio id="player-open" src="audio/door_open.mp3"></audio>
+    <audio id="player-close" src="audio/door_close.mp3"></audio>
+    <button onclick="document.getElementById('player-open').play()" class="btn btn-warning">Разблокировать все</button>
+    <button onclick="document.getElementById('player-close').play()" class="btn btn-danger">Заблокировать все</button>
 
 <div id="accessModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 <div class="modal-header">
