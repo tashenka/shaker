@@ -25,10 +25,19 @@ $(function(){
 </script>
 <?php endif; ?>
 
+
+<?php function showUserForWhile($user){
+  echo "<li>" + $user['time'] + " " + $user['name'] + "</li>";
+}
+?>
+
+
     <audio id="player-open" src="audio/door_open.mp3"></audio>
     <audio id="player-close" src="audio/door_close.mp3"></audio>
+    <audio id="player-siren" src="audio/siren.mp3"></audio>
     <button onclick="document.getElementById('player-open').play()" class="btn btn-warning">Разблокировать все</button>
     <button onclick="document.getElementById('player-close').play()" class="btn btn-danger">Заблокировать все</button>
+    <button type="button" data-toggle="modal" data-target="#sirenModal" onclick="document.getElementById('player-siren').play()" class="btn btn-danger">Включить сигнализацию</button>
 
 <div id="accessModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 <div class="modal-header">
@@ -96,6 +105,18 @@ $(function(){
   </div>
 </div>
 
+<div id="sirenModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Аварийный режим</h3>
+  </div>
+  <div class="modal-body">
+    ВНИМАНИЕ, СРОЧНАЯ ЭВАКУАЦИЯ
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+  </div>
+</div>
 
 <div class="container">     
     <div class="span12">      

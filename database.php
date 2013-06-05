@@ -14,6 +14,7 @@ $users = mysql_query("SELECT * FROM users", $mysql);
       <th colspan="3">Разрешение допуска</th>
     </tr>
     <tr>
+      <th>Добавлен</th>
       <th>ФИО</th>
       <th>Должность</th>
       <th>Время</th>
@@ -28,7 +29,8 @@ $users = mysql_query("SELECT * FROM users", $mysql);
   <tbody>
 <?php while ($row = mysql_fetch_assoc($users)): ?>
 <tr class="<?php echo $row['temprary']? 'warning' : '' ?>">
-<td><?php echo $row['name']; ?></td>
+<td><?php echo $row['created_at']; ?></td>
+<td><a href="user.php?id=<?php echo $row['id']; ?>"><?php echo $row['name']; ?></a></td>
 <td><?php echo $row['position']; ?></td>
 <td><?php echo $row['time']; ?></td>
 <td><?php echo $row['card_id']; ?></td>

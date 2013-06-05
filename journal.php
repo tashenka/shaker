@@ -5,7 +5,7 @@ include 'config.php';
 
 $journal = mysql_query("SELECT * FROM journal INNER JOIN users WHERE journal.user_id = users.id ORDER BY time DESC", $mysql);
 ?>
-<a href="journal.txt.php" class="btn btn-success">Сохранить журнал в txt файл</a>
+<a href="journal.xls.php" class="btn btn-success">Сохранить журнал в Excel файл</a>
 
 <table class="table">
   <thead>

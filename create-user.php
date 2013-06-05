@@ -12,7 +12,7 @@ $password = $_POST["password"];
 
 
 
-$query = "INSERT INTO users (name, position, card_id, zone_green, zone_yellow, zone_red, temprary) VALUES ('$name','$position', '$card_id', $zone_green, $zone_yellow, $zone_red, $temprary);";
+$query = "INSERT INTO users (created_at, name, position, card_id, zone_green, zone_yellow, zone_red, temprary) VALUES (NOW(), '$name','$position', '$card_id', $zone_green, $zone_yellow, $zone_red, $temprary);";
 
 
 $q = mysql_fetch_assoc(mysql_query("SELECT COUNT(*) AS count FROM users WHERE card_id = '$card_id';", $mysql));
