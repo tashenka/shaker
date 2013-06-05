@@ -47,6 +47,14 @@ function braces($n)
           $("#action").fadeOut();
           //$("#finger_scanner").fadeOut();
           $("#finger_scanner").attr("src","images/white_finger.jpg");
+
+
+<?php if($zone=="red"): ?>
+          $("#tongue_scanner").fadeIn();
+          $("#tongue_scanner2").fadeIn();
+<?php endif; ?>
+
+
           if(access_granted){
           $("#access_granted").fadeIn();
           }else{
@@ -87,8 +95,14 @@ function braces($n)
   <div class="span3">
     <img id="finger_scanner2" src="images/white_finger.jpg"/>
   </div>
-  <div class="span6">
+  <div class="span3">
     <img id="finger_scanner" src="images/finger_scanner.gif"/>
+  </div>
+  <div class="span3">
+    <img id="tongue_scanner" style="display:none" src="images/tongue.jpg"/>
+  </div>
+  <div class="span3">
+    <img id="tongue_scanner2" style="display:none" src="images/tongue.jpg"/>
   </div>
 </div>
 <?php endif; ?>
