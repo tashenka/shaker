@@ -122,14 +122,14 @@ $(function(){
     <div class="span12">      
       <img class="port" src="images/port_hover.jpg" usemap="#map" />
 <map name="map">
-<area shape="rect" coords="30,150,930,500" href="green-zone.php"><!--/вся зона-->
-<area shape="rect" coords="65,200,200,300" href="yellow-zone1.php"><!--/1 желтая зона-->
-<area shape="rect" coords="200,350,300,450" href="yellow-zone2.php"><!--/2 желтая зона-->
-<area shape="rect" coords="600,150,700,250" href="yellow-zone3.php"><!--/3 желтая зона-->
-<area shape="rect" coords="750,350,870,450" href="yellow-zone4.php"><!--/4желтая зона-->
-<area shape="circle" coords="80,400,20" href="red-zone1.php"><!--/1 маленькая красная зона-->
-<area shape="circle" coords="110,250,40" href="red-zone2.php"><!--/2и3 красные зоны-->
-<area shape="circle" coords="820,390,30" href="red-zone3.php"><!--/4красная зона-->
+<!--/вся зона--><area shape="rect" coords="30,150,930,500" href="green-zone.php">
+<!--/1 желтая зона--><area shape="rect" coords="65,200,200,300" href="yellow-zone.php?area=1">
+<!--/2 желтая зона--><area shape="rect" coords="200,350,300,450" href="yellow-zone.php?area=2">
+<!--/3 желтая зона--><area shape="rect" coords="600,150,700,250" href="yellow-zone.php?area=3">
+<!--/4желтая зона--><area shape="rect" coords="750,350,870,450" href="yellow-zone.php?area=4">
+<!--/1 маленькая красная зона--><area shape="circle" coords="80,400,20" href="red-zone.php?area=1">
+<!--/2и3 красные зоны--><area shape="circle" coords="110,250,40" href="red-zone.php?area=2">
+<!--/4красная зона--><area shape="circle" coords="820,390,30" href="red-zone.php?area=3">
 </map>
     </div> 
 
