@@ -50,8 +50,7 @@ function braces($n)
 
 
 <?php if($zone=="red"): ?>
-          $("#tongue_scanner").fadeIn();
-          $("#tongue_scanner2").fadeIn();
+          $("#tongue_scanner").fadeOut();
 <?php endif; ?>
 
 
@@ -99,7 +98,7 @@ function braces($n)
     <img id="finger_scanner" src="images/finger_scanner.gif"/>
   </div>
   <div class="span3">
-    <img id="tongue_scanner" style="display:none" src="images/tongue.jpg"/>
+    <img id="tongue_scanner" src="images/tongue_scanner.gif"/>
   </div>
   <div class="span3">
     <img id="tongue_scanner2" style="display:none" src="images/tongue.jpg"/>
