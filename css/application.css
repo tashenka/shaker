@@ -2,7 +2,7 @@
   width: 940px;
   height:558px;
   display:block;
-  background:transparent url('../images/port.jpg') center top no-repeat;
+  /*background:transparent url('../images/port.jpg') center top no-repeat; */
 }
 .port:hover{
   background-image: url('../images/port_hover.jpg');

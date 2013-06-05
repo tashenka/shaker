@@ -120,7 +120,10 @@ $(function(){
 
 <div class="container">     
     <div class="span12">      
-      <div class="port"></div>
+      <img class="port" src="images/port_hover.jpg" usemap="#map" />
+<map name="map">
+<area shape="rect" coords="30,90,400,126" href="green-zone.php">
+</map>
     </div> 
 
     <div class="row">      
