@@ -123,7 +123,7 @@ $(function(){
       <img class="port" src="images/port_hover.jpg" usemap="#map" />
 <map name="map">
 <!--/зел зона--><area shape="rect" coords="30,150,600,220" href="green-zone.php">
-  <area shape="rect" coords="185,220,900,370" href="green-zone.php">
+	<area shape="rect" coords="185,220,900,370" href="green-zone.php">
 	<area shape="rect" coords="270,370,738,500" href="green-zone.php">
 	
 <!--/1 желтая зона--><area shape="rect" coords="65,200,110,250" href="yellow-zone.php?area=1">
