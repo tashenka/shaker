@@ -23,6 +23,9 @@
   <li class="<?php echo ($file_name == 'journal.php')? 'active' : '' ?>">
     <a href="journal.php">Журнал</a>
   </li>
+  <li class="<?php echo ($file_name == 'scud.php')? 'active' : '' ?>">
+    <a href="scud.php">Аппаратное обеспечение СКУД</a>
+  </li>
   <li>
     <div id="clock"></div>
   </li>
