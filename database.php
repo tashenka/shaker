@@ -17,7 +17,6 @@ $users = mysql_query("SELECT * FROM users", $mysql);
       <th>Добавлен</th>
       <th>ФИО</th>
       <th>Должность</th>
-      <th>Время</th>
       <th>№ Карты</th>
       <th>Зеленая</th>
       <th>Желтая</th>
@@ -32,7 +31,6 @@ $users = mysql_query("SELECT * FROM users", $mysql);
 <td><?php echo $row['created_at']; ?></td>
 <td><a href="user.php?id=<?php echo $row['id']; ?>"><?php echo $row['name']; ?></a></td>
 <td><?php echo $row['position']; ?></td>
-<td><?php echo $row['time']; ?></td>
 <td><?php echo $row['card_id']; ?></td>
 <td><?php echo ($row['zone_green'] ? 'ДА' : 'НЕТ'); ?></td>
 <td><?php echo ($row['zone_yellow'] ? 'ДА' : 'НЕТ'); ?></td>

@@ -42,6 +42,11 @@ function braces($n)
 
         if (i < count) {            //  if the counter < 10, call the loop function
           myLoop();             //  ..  again which will trigger another 
+          if(i/count > 0.5){
+          <?php if($zone=="red"): ?>
+              $("#tongue_scanner").fadeIn();
+          <?php endif; ?>
+          }
         }                        //  ..  setTimeout()
         else{
           $("#action").fadeOut();
@@ -98,10 +103,14 @@ function braces($n)
     <img id="finger_scanner" src="images/finger_scanner.gif"/>
   </div>
   <div class="span3">
-    <img id="tongue_scanner" src="images/tongue_scanner.gif"/>
+<?php if($zone=="red"): ?>
+    <img id="tongue_scanner" style="display:none" src="images/tongue_scanner.gif"/>
+<?php endif; ?>
   </div>
   <div class="span3">
+<?php if($zone=="red"): ?>
     <img id="tongue_scanner2" style="display:none" src="images/tongue.jpg"/>
+<?php endif; ?>
   </div>
 </div>
 <?php endif; ?>
