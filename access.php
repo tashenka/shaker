@@ -44,7 +44,9 @@ function braces($n)
           myLoop();             //  ..  again which will trigger another 
           if(i/count > 0.5){
           <?php if($zone=="red"): ?>
-              $("#tongue_scanner").fadeIn();
+            $("#finger_scanner").attr("src","images/white_finger.jpg");
+              $("#tongue_scanner").show();
+              $("#tongue_scanner2").show();
           <?php endif; ?>
           }
         }                        //  ..  setTimeout()
@@ -52,11 +54,8 @@ function braces($n)
           $("#action").fadeOut();
           //$("#finger_scanner").fadeOut();
           $("#finger_scanner").attr("src","images/white_finger.jpg");
+          $("#tongue_scanner").attr("src","images/tongue.jpg");
 
-
-<?php if($zone=="red"): ?>
-          $("#tongue_scanner").fadeOut();
-<?php endif; ?>
 
 
           if(access_granted){
@@ -68,7 +67,7 @@ function braces($n)
 
         }
 
-      }, 500)
+      }, 1500)
     }
 
     myLoop();                      //  start the loop
