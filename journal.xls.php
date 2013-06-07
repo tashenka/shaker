@@ -1,15 +1,37 @@
 <?php
 include 'config.php';
 
-$journal = mysql_query("SELECT * FROM journal INNER JOIN users WHERE journal.user_id = users.id ORDER BY time DESC", $mysql);
+$journal = mysql_query("SELECT * FROM journal LEFT OUTER JOIN users ON journal.user_id = users.id ORDER BY time DESC", $mysql);
 //mysql_query("DELETE FROM journal", $mysql);
 $content = "";
-$content .= "Время\tВход/Выход\tФИО\tДолжность\t№ Карты\tЗона\tОтпечаток пальца\tОтпечаток языка\n";
+$content .= "Время\tСообщение\tВход/Выход\tФИО\tДолжность\t№ Карты\tЗона\tОтпечаток пальца\tОтпечаток языка\n";
+
 
 while($row = mysql_fetch_assoc($journal)) {
+    switch ($row['message']) {
+    case 'alarm':
+      $message = 'Включена аварийная сигнализация';
+      break;
+    case 'adduser':
+      $message = 'Добавлен пользователь';
+      break;
+    case 'deluser':
+      $message = 'Удален пользователь';
+      break;
+    case 'unblock':
+      $message = 'Входы/выходы разблокированы';
+      break;
+    case 'block':
+      $message = 'Входы/выходы заблокированы';
+      break;
+    default:
+      $message = 'Доступ';
+    }
 $content .= $row['time'];
 $content .= "\t";
-$content .= "Вход";
+$content .= $message;
+$content .= "\t";
+$content .= ($row['message'] ? '' : 'Вход') ;
 $content .= "\t";
 $content .= $row['name'];
 $content .= "\t";
@@ -19,11 +41,16 @@ $content .= $row['card_id'];
 $content .= "\t";
 $content .= $row['zone'];
 $content .= "\t";
-$content .= "Прошел";
+$content .= ($row['message'] ? '' : 'Прошел') ;
 $content .= "\t";
-$content .= $row['allowed'] ? "Прошел" : "Сканер не сработал";
+if(!$row['message']){
+  $content .= $row['allowed'] ? "Прошел" : "Сканер не сработал";
+}
 $content .= "\n";
 }
+
+
+
 $length = strlen($content);
 
 $content = mb_convert_encoding($content, "WINDOWS-1251", "UTF-8");

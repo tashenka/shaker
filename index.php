@@ -35,9 +35,9 @@ $(function(){
     <audio id="player-open" src="audio/door_open.mp3"></audio>
     <audio id="player-close" src="audio/door_close.mp3"></audio>
     <audio id="player-siren" src="audio/siren.mp3"></audio>
-    <button onclick="document.getElementById('player-open').play()" class="btn btn-warning">Разблокировать все</button>
-    <button onclick="document.getElementById('player-close').play()" class="btn btn-danger">Заблокировать все</button>
-    <button type="button" data-toggle="modal" data-target="#sirenModal" onclick="document.getElementById('player-siren').play()" class="btn btn-danger">Включить сигнализацию</button>
+    <button onclick="$.ajax({url: 'enable-unblock.php',context: document.body});document.getElementById('player-open').play()" class="btn btn-warning">Разблокировать все</button>
+    <button onclick="$.ajax({url: 'enable-block.php',context: document.body});document.getElementById('player-close').play()" class="btn btn-danger">Заблокировать все</button>
+    <button type="button" data-toggle="modal" data-target="#sirenModal" onclick="document.getElementById('player-siren').play();$.ajax({url: 'enable-siren.php',context: document.body})" class="btn btn-danger">Включить сигнализацию</button>
 
 <div id="accessModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 <div class="modal-header">

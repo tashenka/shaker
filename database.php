@@ -3,7 +3,7 @@
 include 'header.php';
 include 'config.php';
 
-$users = mysql_query("SELECT * FROM users", $mysql);
+$users = mysql_query("SELECT * FROM users WHERE deleted = 0", $mysql);
 ?>
 
 

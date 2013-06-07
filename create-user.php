@@ -28,5 +28,11 @@ header('Location: add-user.php?notice_error=Сотрудник+с+такой+к�
 exit();
 }
 $result = mysql_query($query, $mysql) or die(mysql_error());;
+
+
+$id = mysql_insert_id();
+$query2 = "INSERT INTO journal (user_id, time, message) VALUES ($id, NOW(), 'adduser');";
+mysql_query($query2, $mysql) or die(mysql_error());;
+
 header('Location: database.php');
 ?>
