@@ -4,8 +4,8 @@ include 'config.php';
 
 $area = $_GET['area'];
 
-$users = mysql_query("SELECT DISTINCT users.name FROM journal INNER JOIN users WHERE journal.user_id = users.id AND journal.zone = 'yellow' and journal.allowed = 1 ORDER BY time DESC", $mysql);
-$users_access = mysql_query("SELECT * FROM users WHERE zone_yellow = 1", $mysql);
+$users = mysql_query("SELECT DISTINCT users.name FROM journal INNER JOIN users WHERE journal.user_id = users.id AND journal.zone = 'yellow' and journal.allowed = 1 and users.deleted = 0 ORDER BY time DESC", $mysql);
+$users_access = mysql_query("SELECT * FROM users WHERE zone_yellow = 1 and users.deleted = 0", $mysql);
 ?>
 
 
