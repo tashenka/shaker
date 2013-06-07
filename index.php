@@ -121,26 +121,7 @@ $(function(){
 <div class="container">     
     <div class="span12">      
       <img class="port" src="images/port_hover.jpg" usemap="#map" />
-<map name="map">
-<!--/зел зона--><area shape="rect" coords="30,150,600,220" href="green-zone.php">
-	<area shape="rect" coords="185,220,900,370" href="green-zone.php">
-	<area shape="rect" coords="270,370,738,500" href="green-zone.php">
-	
-<!--/1 желтая зона--><area shape="rect" coords="65,200,110,250" href="yellow-zone.php?area=1">
-	<area shape="rect" coords="110,250,200,300" href="yellow-zone.php?area=1">
-	<area shape="rect" coords="110,200,200,250" href="red-zone.php?area=2">
-	<area shape="rect" coords="65,250,110,300" href="red-zone.php?area=2">
-	
-<!--/2 желтая зона--><area shape="rect" coords="200,350,300,450" href="yellow-zone.php?area=2">
-
-<!--/3 желтая зона--><area shape="rect" coords="600,150,700,250" href="yellow-zone.php?area=3">-->
-
-<!--/4 желтая зона--><area shape="rect" coords="750,350,810,470" href="yellow-zone.php?area=4">
-	<area shape="rect" coords="810,415,870,470" href="yellow-zone.php?area=4">
-	<area shape="rect" coords="810,350,870,415" href="red-zone.php?area=3">
-	
-<!--/1 маленькая красная зона--> <area shape="circle" coords="80,400,20" href="red-zone.php?area=1">-->
-</map>
+<map id="map" name="map"><area shape="rect" alt="" title="" coords="38,147,58,461" href="green-zone.php" target="" /><area shape="rect" alt="" title="" coords="67,147,612,200" href="green-zone.php" target="" /><area shape="rect" alt="" title="" coords="84,273,212,460" href="green-zone.php" target="" /><area shape="rect" alt="" title="" coords="191,202,613,271" href="green-zone.php" target="" /><area shape="rect" alt="" title="" coords="685,145,919,208" href="green-zone.php" target="" /><area shape="rect" alt="" title="" coords="66,398,81,461" href="green-zone.php" target="" /><area shape="rect" alt="" title="" coords="615,210,922,272" href="" target="" /><area shape="rect" alt="" title="" coords="213,274,921,345" href="green-zone.php" target="" /><area shape="rect" alt="" title="" coords="214,400,749,459" href="green-zone.php" target="" /><area shape="rect" alt="" title="" coords="270,348,749,399" href="green-zone.php" target="" /><area shape="rect" alt="" title="" coords="752,433,922,460" href="green-zone.php" target="" /><area shape="rect" alt="" title="" coords="859,349,921,430" href="green-zone.php" target="" /><area shape="rect" alt="" title="" coords="123,202,134,270" href="yellow-zone.php?area=1" target="" /><area shape="rect" alt="" title="" coords="68,202,96,271" href="yellow-zone.php?area=1" target="" /><area shape="rect" alt="" title="" coords="162,203,190,269" href="yellow-zone.php?area=1" target="" /><area shape="rect" alt="" title="" coords="98,202,116,238" href="yellow-zone.php?area=1" target="" /><area shape="rect" alt="" title="" coords="98,241,118,273" href="red_zone.php.php?area=2" target="" /><area shape="rect" alt="" title="" coords="136,203,156,215" href="yellow-zone.php?area=1" target="" /><area shape="rect" alt="" title="" coords="136,242,155,270" href="yellow-zone.php?area=1" target="" /><area shape="rect" alt="" title="" coords="60,361,81,391" href="red_zone.php?area=1" target="" /><area shape="rect" alt="" title="" coords="67,273,80,359" href="green-zone.php" target="" /><area shape="rect" alt="" title="" coords="136,215,159,240" href="red_zone.php?area=3" target="" /><area shape="rect" alt="" title="" coords="215,349,269,399" href="yellow-zone.php?area=2" target="" /><area shape="rect" alt="" title="" coords="617,150,682,206" href="yellow-zone.php?area=3" target="" /><area shape="rect" alt="" title="" coords="753,348,803,430" href="yellow-zone.php?area=4" target="" /><area shape="rect" alt="" title="" coords="805,392,855,432" href="yellow-zone.php?area=4" target="" /><area shape="rect" alt="" title="" coords="836,347,855,390" href="yellow-zone.php?area=4" target="" /><area shape="rect" alt="" title="" coords="807,348,834,389" href="red-zone.php.area=4" target="" /><!-- Created by Online Image Map Editor (http://www.maschek.hu/imagemap/index) --></map>
     </div> 
 
     <div class="row">      
