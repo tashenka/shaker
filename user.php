@@ -10,7 +10,7 @@ $user = mysql_fetch_assoc($users);
 ?>
 
 <div class="hero-unit">
-<img src="images/users/<?php echo $user['id'] ?>.jpg" style="width:100px" class="img-rounded">
+<img src="images/users/<?php echo $user['id'] ?>.jpg" style="width:160px" class="img-rounded">
   <h1><?php echo $user['name']; ?></h1>
   <p>Должность: <?php echo $user['position']; ?></p>
   <p>Сотрудник добавлен: <?php echo $user['created_at']; ?></p>
