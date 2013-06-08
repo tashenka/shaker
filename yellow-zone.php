@@ -32,10 +32,13 @@ $users_access = mysql_query("SELECT * FROM users WHERE zone_yellow = 1 and users
 	  <h2 align="center">Данные о зоне:</h2>
 	    <h3 align="center">Информация о сотрудниках</h3>
 	  <p>Имеют право доступа:</p>
+<ul>
   <?php while ($row_y = mysql_fetch_assoc($users_access)): ?>
 <li><?php echo $row_y['name']; ?></li>
   <?php endwhile ?>
+    </ul>
 	  <p>Находятся: <?php echo $user['']; ?></p>
+
     <ul>
   <?php while ($row_y = mysql_fetch_assoc($users)): ?>
 <li><?php echo $row_y['name']; ?></li>
