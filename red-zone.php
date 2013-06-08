@@ -125,7 +125,7 @@ $area = $_GET['area'];
   <tr>
 	<td width="50%">
 	    <h2 align="center">Изображение зоны:<h2>
-		<img src="images/red4.jpg" style="width:100%" class="img-rounded">
+		<img src="images/red4.jpeg" style="width:100%" class="img-rounded">
 	</td>
 	<td rowspan="2">
 	  <h2 align="center">Данные о зоне:</h2>
