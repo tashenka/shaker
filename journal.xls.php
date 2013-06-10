@@ -2,7 +2,7 @@
 include 'config.php';
 
 $journal = mysql_query("SELECT * FROM journal LEFT OUTER JOIN users ON journal.user_id = users.id ORDER BY time DESC", $mysql);
-//mysql_query("DELETE FROM journal", $mysql);
+mysql_query("DELETE FROM journal", $mysql);
 $content = "";
 $content .= "Время\tСообщение\tВход/Выход\tФИО\tДолжность\t№ Карты\tЗона\tОтпечаток пальца\tОтпечаток языка\n";
 
