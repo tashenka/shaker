@@ -5,7 +5,7 @@ include 'config.php';
 $id = mysql_escape_string($_GET['id']);
 $zone = mysql_escape_string($_GET['zone']);
 $query = mysql_query("SELECT * FROM users WHERE id = $id", $mysql);
-$users = mysql_query("SELECT * FROM users WHERE id != $id", $mysql);
+$users = mysql_query("SELECT * FROM users WHERE id != $id and deleted = 0", $mysql);
 $user = mysql_fetch_assoc($query);
 $array = array();
 
