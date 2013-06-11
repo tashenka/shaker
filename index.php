@@ -161,9 +161,9 @@ $(function(){
 </tr>
 <tr>
 	<td>
-			<br><br><button onclick="$.ajax({url: 'enable-unblock.php',context: document.body});document.getElementById('player-open').play()" style=" width:100%; height: 75px">Разблокировать все</button>
-			<br><br><button onclick="$.ajax({url: 'enable-block.php',context: document.body});document.getElementById('player-close').play()" style=" width:100%; height: 75px">Заблокировать все</button>
-			<br><br><button type="button" data-toggle="modal" data-target="#sirenModal" onclick="document.getElementById('player-siren').play();$.ajax({url: 'enable-siren.php',context: document.body})" style=" width:100%; height: 75px">Включить сигнализацию</button>
+			<br><br><button id="unblock_button" onclick="$.ajax({url: 'enable-unblock.php',context: document.body});document.getElementById('player-open').play()" style=" width:100%; height: 75px">Разблокировать все</button>
+			<br><br><button id="block_button" onclick="$.ajax({url: 'enable-block.php',context: document.body});document.getElementById('player-close').play()" style=" width:100%; height: 75px">Заблокировать все</button>
+			<br><br><button id="siren_button" type="button" data-toggle="modal" data-target="#sirenModal" onclick="document.getElementById('player-siren').play();$.ajax({url: 'enable-siren.php',context: document.body})" style=" width:100%; height: 75px">Включить сигнализацию</button>
 	</td>
 
 </tr>
